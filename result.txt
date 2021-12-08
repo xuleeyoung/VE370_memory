@@ -1,0 +1,921 @@
+============================================
+Request Number:  x
+addr = 0xxxxxxxxxxxxxxx
+addr = 0xxxxxxxxxxx
+hit = x
+Read_data = 0xxxxxxxxx
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+INDEX = 00
+CACHE_ADDR_IN = 00xxxxxxxx
+CACHE_ADDR_IN = 00xxxxxxxx
+CACHE_HIT = x
+============================================
+Request Number:  0
+addr = 0x00000110101001
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0xxxxxxxxx
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+INDEX = 00
+CACHE_ADDR_IN = 0110101001
+CACHE_ADDR_IN = 0110101001
+CACHE_HIT = 0
+============================================
+Request Number:  0
+addr = 0x00000110101001
+addr = 0x0110101001
+hit = 0
+Read_data = 0xxxxxxxxx
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 0  R: 1  P.addr = 01
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+============================================
+Request Number:  0
+addr = 0x00000110101001
+addr = 0x0110101001
+hit = 1
+Read_data = 0xffffffef
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 0  R: 1  P.addr = 01
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabcdabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0x12345678
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+CACHE_ADDR_IN = 0110100001
+CACHE_ADDR_IN = 0110100001
+CACHE_HIT = 1
+============================================
+Request Number:  1
+addr = 0x00000110100001
+addr = 0x0110100001
+hit = 1
+Read_data = 0xffffffef
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabcdabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0x12345678
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+CACHE_ADDR_IN = 0110101100
+CACHE_ADDR_IN = 0110101100
+CACHE_HIT = 1
+============================================
+Request Number:  2
+addr = 0x00000110101100
+addr = 0x0110101100
+hit = 1
+Read_data = 0xffffffef
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0x12345678
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+INDEX = 01
+============================================
+Request Number:  3
+addr = 0x00001111100100
+addr = 0x0110101100
+hit = 1
+Read_data = 0xffffffef
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 0  P.addr = 11
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+cache[2]:
+Tag: 00000
+word[0] = 0xxxxxxxxx   word[1] = 0xxxxxxxxx
+word[2] = 0xxxxxxxxx   word[3] = 0xxxxxxxxx
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+CACHE_ADDR_IN = 1111100100
+CACHE_ADDR_IN = 1111100100
+CACHE_HIT = 0
+============================================
+Request Number:  3
+addr = 0x00001111100100
+addr = 0x1111100100
+hit = 0
+Read_data = 0xffffffef
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+cache[2]:
+Tag: 11111
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+CACHE_ADDR_IN = 0111001000
+CACHE_ADDR_IN = 0111001000
+CACHE_HIT = 0
+============================================
+Request Number:  4
+addr = 0x00000111001000
+addr = 0x0111001000
+hit = 0
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcdebcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+cache[2]:
+Tag: 11111
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabcdabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0x12345678
+============================================
+============================================
+Request Number:  4
+addr = 0x00000111001000
+addr = 0x0111001000
+hit = 0
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 11111
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+INDEX = 10
+============================================
+Request Number:  5
+addr = 0x00001010100101
+addr = 0x0111001000
+hit = 1
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 0  P.addr = 10
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 11111
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 1010100101
+CACHE_ADDR_IN = 1010100101
+CACHE_HIT = 0
+============================================
+Request Number:  5
+addr = 0x00001010100101
+addr = 0x1010100101
+hit = 0
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 0  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 10101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+INDEX = 11
+============================================
+Request Number:  6
+addr = 0x00000010100101
+addr = 0x1010100101
+hit = 1
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 0  R: 0  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 01110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 10101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 0010100101
+CACHE_ADDR_IN = 0010100101
+CACHE_HIT = 0
+============================================
+Request Number:  6
+addr = 0x00000010100101
+addr = 0x0010100101
+hit = 0
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 0  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 10101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 0110100101
+CACHE_ADDR_IN = 0110100101
+CACHE_HIT = 0
+============================================
+Request Number:  7
+addr = 0x00000110100101
+addr = 0x0110100101
+hit = 0
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 0  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 10101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number:  7
+addr = 0x00000110100101
+addr = 0x0110100101
+hit = 1
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000011  V: 1  D: 0  R: 1  P.addr = 11
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 0  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcddbcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+INDEX = 01
+============================================
+Request Number:  8
+addr = 0x00010010100100
+addr = 0x0110100101
+hit = 1
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 0  R: 0  P.addr = 00
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 0  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcddbcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 0010100100
+CACHE_ADDR_IN = 0010100100
+CACHE_HIT = 1
+CACHE_ADDR_IN = 0010101111
+CACHE_ADDR_IN = 0010101111
+CACHE_HIT = 1
+============================================
+Request Number:  9
+addr = 0x00000010101111
+addr = 0x0010101111
+hit = 1
+Read_data = 0x00000000
+pg_fault = 0
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:000010  V: 1  D: 0  R: 1  P.addr = 10
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+cache[2]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcddbcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+INDEX = 10
+============================================
+Request Number: 10
+addr = 0x10000111001000
+addr = 0x0010101111
+hit = 1
+Read_data = 0x00000000
+pg_fault = 1
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:100001  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 01101
+word[0] = 0xabacabcd   word[1] = 0xbcddbcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcdebcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 0011001000
+CACHE_ADDR_IN = 0011001000
+CACHE_HIT = 0
+============================================
+Request Number: 10
+addr = 0x10000111001000
+addr = 0x0011001000
+hit = 0
+Read_data = 0x00000000
+pg_fault = 1
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:100001  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 01101
+word[0] = 0x00000000   word[1] = 0xbcddbcde
+word[2] = 0xcdefcdef   word[3] = 0xffffffac
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+INDEX = 10
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x0011001000
+hit = 1
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 0  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+CACHE_ADDR_IN = 00xxxxxxxx
+CACHE_ADDR_IN = 00xxxxxxxx
+CACHE_HIT = x
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+============================================
+Request Number: 11
+addr = 0xxxxxxxxxxxxxxx
+addr = 0x00xxxxxxxx
+hit = x
+Read_data = 0x00000000
+pg_fault = x
+--------------------------------------------
+TLB:
+TLB[0]: tags:000001  V: 1  D: 1  R: 1  P.addr = 01
+TLB[1]: tags:000100  V: 1  D: 1  R: 1  P.addr = 00
+TLB[2]: tags:xxxxxx  V: 0  D: 0  R: 1  P.addr = 00
+TLB[3]: tags:000000  V: 1  D: 1  R: 1  P.addr = 00
+--------------------------------------------
+--------------------------------------------
+cache[1]:
+Tag: 00101
+word[0] = 0x00000000   word[1] = 0xaabbccdd
+word[2] = 0x00000000   word[3] = 0x000000aa
+--------------------------------------------
+cache[2]:
+Tag: 00110
+word[0] = 0x00000000   word[1] = 0x00000000
+word[2] = 0x00000000   word[3] = 0x00000000
+--------------------------------------------
+Main Memory:
+memo[104] = 0xabacabcd   memo[105] = 0xbcddbcde
+memo[106] = 0xcdefcdef   memo[107] = 0xffffffac
+============================================
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 300000 ticks.
+** Continue **
